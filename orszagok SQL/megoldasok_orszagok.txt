@@ -1,0 +1,26 @@
+1. SELECT `orszag`, `fovaros` FROM `orszagok` WHERE `fovaros` = "MADAGASZKÁR";
+	ANTANANARIVO
+
+2. SELECT `orszag`, `fovaros` FROM `orszagok` WHERE `fovaros` = "OUAGADOUGOU";
+	BURKINA FASO
+
+3. SELECT `orszag`, `autojel` FROM `orszagok` WHERE `autojel` = "TT";
+	TRINIDAD ÉS TOBAGO
+
+4. SELECT `orszag`, `penzjel` FROM `orszagok` WHERE `penzjel` = "SGD";
+	SZINGAPÚR
+
+5. SELECT `orszag`, `telefon` FROM `orszagok` WHERE `telefon` = "61";
+	AUSZTRÁLIA
+
+6. SELECT `orszag`, `terulet` FROM `orszagok` WHERE `orszag` = "MONACO";
+	1.95
+
+7. SELECT `orszag`, `nepesseg` FROM `orszagok` WHERE `orszag` = "MÁLTA";
+	392
+
+8. SELECT `orszag`, `nepesseg`/`terulet`*1000 AS `nepsuruseg` FROM `orszagok` WHERE `orszag` = "JAPÁN";
+	342.3031
+
+9. SELECT `orszag`, SUM(`nepesseg`) FROM `orszagok`;
+	7076338
