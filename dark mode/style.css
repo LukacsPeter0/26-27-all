@@ -75,3 +75,10 @@ ul li span {
     background: #fff;
 
 }
+
+ul li span:nth-child(1) {
+
+    background: #262626;
+    color: #fff;
+
+}
