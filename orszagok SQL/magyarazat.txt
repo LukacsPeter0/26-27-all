@@ -1,0 +1,394 @@
+1.
+SELECT orszag, fovaros
+FROM orszagok
+WHERE orszag = 'MADAGASZKÁR';
+
+2.
+SELECT orszag, fovaros
+FROM orszagok
+WHERE fovaros = 'OUAGADOUGOU';
+
+3.
+SELECT orszag, autojel
+FROM orszagok
+WHERE autojel = 'TT';
+
+4.
+SELECT orszag, penznem, penzjel
+FROM orszagok
+WHERE penzjel = 'SGD';
+
+5.
+SELECT orszag, telefon
+FROM orszagok
+WHERE telefon = 61;
+
+6.
+SELECT orszag, terulet
+FROM orszagok
+WHERE orszag = 'Monaco';
+
+7.
+SELECT orszag, nepesseg
+FROM orszagok
+WHERE orszag = 'Málta';
+
+8.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+WHERE orszag = 'Japán';
+
+9.
+SELECT SUM(nepesseg) / 1000 AS milliard_fo
+FROM orszagok;
+
+10.
+SELECT SUM(terulet) AS osszterulet
+FROM orszagok;
+
+11.
+SELECT AVG(nepesseg) AS atlagos_nepesseg
+FROM orszagok;
+
+12.
+SELECT AVG(terulet) AS atlagos_terulet
+FROM orszagok;
+
+13.
+SELECT SUM(nepesseg) / SUM(terulet) * 1000 AS fold_nepsurusege
+FROM orszagok;
+
+14.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE terulet > 1000000;
+
+15.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE terulet < 100;
+
+16.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE nepesseg < 20;
+
+17.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE terulet < 100 OR nepesseg < 20;
+
+18.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE terulet BETWEEN 50000 AND 150000;
+
+19.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE nepesseg BETWEEN 8000 AND 12000;
+
+20.
+SELECT orszag, fovaros, nep_fovaros
+FROM orszagok
+WHERE nep_fovaros > 20000;
+
+21.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+WHERE nepesseg / terulet * 1000 > 500;
+
+22.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE allamforma = 'köztársaság';
+
+23.
+SELECT orszag, penznem
+FROM orszagok
+WHERE penznem = 'kelet-karib dollár';
+
+24.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE orszag LIKE '%ORSZÁG';
+
+25.
+SELECT orszag, penznem
+FROM orszagok
+WHERE penznem LIKE '%korona%';
+
+26.
+SELECT SUM(terulet) AS europa_terulete
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%';
+
+27.
+SELECT SUM(nepesseg) AS europa_nepessege
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%';
+
+28.
+SELECT SUM(nepesseg) / SUM(terulet) * 1000 AS europa_nepsurusege
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%';
+
+29.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE foldr_hely LIKE '%Afrika%';
+
+30.
+SELECT SUM(nepesseg) AS afrika_nepessege
+FROM orszagok
+WHERE foldr_hely LIKE '%Afrika%';
+
+31.
+SELECT SUM(nepesseg) / SUM(terulet) * 1000 AS afrika_nepsurusege
+FROM orszagok
+WHERE foldr_hely LIKE '%Afrika%';
+
+32.
+SELECT orszag, foldr_hely
+FROM orszagok
+WHERE foldr_hely LIKE '%sziget%';
+
+33.
+SELECT orszag, allamforma
+FROM orszagok
+WHERE allamforma = 'hercegség'
+   OR allamforma = 'királyság';
+
+34.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE autojel IS NULL OR autojel = '';
+
+35.
+SELECT orszag, valtopenz
+FROM orszagok
+WHERE valtopenz NOT LIKE '100%';
+
+36.
+SELECT COUNT(*) AS orszagok_szama
+FROM orszagok
+WHERE terulet < (
+    SELECT terulet
+    FROM orszagok
+    WHERE orszag = 'Magyarország'
+);
+
+37.
+SELECT orszag, terulet
+FROM orszagok
+WHERE terulet = (
+    SELECT MAX(terulet)
+    FROM orszagok
+);
+
+38.
+SELECT orszag, terulet
+FROM orszagok
+WHERE terulet = (
+    SELECT MIN(terulet)
+    FROM orszagok
+);
+
+39.
+SELECT orszag, nepesseg
+FROM orszagok
+WHERE nepesseg = (
+    SELECT MAX(nepesseg)
+    FROM orszagok
+);
+
+40.
+SELECT orszag, nepesseg
+FROM orszagok
+WHERE nepesseg = (
+    SELECT MIN(nepesseg)
+    FROM orszagok
+);
+
+41.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+WHERE nepesseg / terulet * 1000 = (
+    SELECT MAX(nepesseg / terulet * 1000)
+    FROM orszagok
+);
+
+42.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+WHERE nepesseg / terulet * 1000 = (
+    SELECT MIN(nepesseg / terulet * 1000)
+    FROM orszagok
+);
+
+43.
+SELECT orszag, terulet
+FROM orszagok
+WHERE foldr_hely LIKE '%Afrika%'
+  AND terulet = (
+      SELECT MAX(terulet)
+      FROM orszagok
+      WHERE foldr_hely LIKE '%Afrika%'
+  );
+
+44.
+SELECT orszag, nepesseg
+FROM orszagok
+WHERE foldr_hely LIKE '%Amerika%'
+  AND terulet = (
+      SELECT MIN(terulet)
+      FROM orszagok
+      WHERE foldr_hely LIKE '%Amerika%'
+  );
+
+45.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+WHERE foldr_hely NOT LIKE '%városállam%'
+  AND foldr_hely NOT LIKE '%törpeállam%'
+ORDER BY nepsuruseg DESC
+LIMIT 0, 3;
+
+46.
+SELECT orszag, fovaros, nep_fovaros
+FROM orszagok
+ORDER BY nep_fovaros DESC
+LIMIT 0, 6;
+
+47.
+SELECT orszag, gdp
+FROM orszagok
+ORDER BY gdp DESC
+LIMIT 0, 10;
+
+48.
+SELECT orszag, nepesseg * gdp AS ossz_gdp
+FROM orszagok
+ORDER BY ossz_gdp DESC
+LIMIT 0, 10;
+
+49.
+SELECT orszag, gdp
+FROM orszagok
+WHERE gdp = (
+    SELECT MIN(gdp)
+    FROM orszagok
+);
+
+50.
+SELECT orszag, terulet
+FROM orszagok
+ORDER BY terulet ASC
+LIMIT 39, 1;
+
+51.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+ORDER BY nepsuruseg ASC
+LIMIT 14, 1;
+
+52.
+SELECT orszag, nepesseg / terulet * 1000 AS nepsuruseg
+FROM orszagok
+ORDER BY nepsuruseg DESC
+LIMIT 60, 1;
+
+53.
+SELECT orszag, terulet,
+       ABS(terulet - (
+           SELECT terulet
+           FROM orszagok
+           WHERE orszag = 'Magyarország'
+       )) AS elteres
+FROM orszagok
+WHERE orszag <> 'Magyarország'
+ORDER BY elteres ASC
+LIMIT 0, 3;
+
+54.
+SELECT SUM(nepesseg) / (
+    SELECT SUM(nepesseg)
+    FROM orszagok
+) AS azsiaiak_aranya
+FROM orszagok
+WHERE foldr_hely LIKE '%Ázsia%';
+
+55.
+SELECT SUM(terulet) / (
+    SELECT SUM(terulet)
+    FROM orszagok
+) * 100 AS oroszorszag_aranya
+FROM orszagok
+WHERE orszag = 'Oroszország';
+
+56.
+SELECT SUM(nepesseg) / (
+    SELECT SUM(nepesseg)
+    FROM orszagok
+) * 100 AS euroval_fizetok_szazaleka
+FROM orszagok
+WHERE penznem = 'euro';
+
+57.
+SELECT MAX(gdp) / MIN(gdp) AS hanyszoros
+FROM orszagok;
+
+58.
+SELECT (
+    SELECT nepesseg * gdp
+    FROM orszagok
+    WHERE orszag = 'USA'
+) / SUM(nepesseg * gdp) * 100 AS usa_gdp_szazalek
+FROM orszagok;
+
+59.
+SELECT SUM(nepesseg * gdp) / (
+    SELECT SUM(nepesseg * gdp)
+    FROM orszagok
+) * 100 AS euroovezet_gdp_szazalek
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%'
+  AND penznem = 'euro';
+
+60.
+SELECT orszag, gdp, foldr_hely
+FROM orszagok
+WHERE gdp > (
+    SELECT AVG(gdp)
+    FROM orszagok
+)
+AND foldr_hely NOT LIKE '%Európa%'
+AND foldr_hely NOT LIKE '%Amerika%';
+
+61.
+SELECT DISTINCT allamforma
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%';
+
+62.
+SELECT COUNT(DISTINCT allamforma) AS allamformak_szama
+FROM orszagok;
+
+63.
+SELECT COUNT(DISTINCT penznem) AS fizetoeszkozok_szama
+FROM orszagok
+WHERE foldr_hely LIKE '%Európa%'
+  AND penznem <> 'euro';
+
+64.
+SELECT penznem, COUNT(*) AS hely
+FROM orszagok
+GROUP BY penznem
+HAVING hely > 1
+ORDER BY hely DESC;
+
+65.
+SELECT allamforma, COUNT(*) AS db
+FROM orszagok
+GROUP BY allamforma
+HAVING db = 1;
