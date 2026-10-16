@@ -1,17 +1,12 @@
-import java.io.FileReader;
+import java.util.Scanner;
 import java.io.IOException;
+import java.io.File;
 
 public class main {
     public static void main(String[] args) throws IOException {
         
-        FileReader file_Reader = new FileReader("./helsinki.txt");
-
-        int szam;
-        szam = file_Reader.read();
-
-        file_Reader.close();
-
-        System.out.println(szam);
+        File file = new File("Helsinki/helsinki.txt");
+        Scanner scanner = new Scanner(file);
 
     }
 }
