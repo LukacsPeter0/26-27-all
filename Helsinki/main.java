@@ -17,16 +17,35 @@ public class main {
         
         File file = new File("Helsinki/helsinki.txt");
         Scanner scanner = new Scanner(file);
-        Eredmeny[] eredmeny = new Eredmeny[200];
+        Eredmeny[] eredmenyek = new Eredmeny[200];
+
+        int db = 0;
 
         while (scanner.hasNext()) {
 
-            helyezes = scanner.nextInt();
-            sportolok_szama = scanner.nextInt();
-            sportag = scanner.next();
-            versenyszam = scanner.next();
+            eredmenyek[db] = new Eredmeny();
+
+            eredmenyek[db].helyezes = scanner.nextInt();
+            eredmenyek[db].sportolok_szama = scanner.nextInt();
+            eredmenyek[db].sportag = scanner.next();
+            eredmenyek[db].versenyszam = scanner.next();
+
+            db++;
+        }
+
+        int pontszerzesek = 0;
+
+        for (int i = 0; i < db; i++) {
+
+            if (eredmenyek[i].helyezes <= 6) {
+
+                pontszerzesek++;
+
+            }
 
         }
+
+        System.out.println(pontszerzesek);
 
         scanner.close();
 
