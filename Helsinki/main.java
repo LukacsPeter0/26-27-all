@@ -35,17 +35,32 @@ public class main {
 
         int pontszerzesek = 0;
 
+        int arany = 0;
+        int ezust = 0;
+        int bronz = 0;
+
+        int pontok_osszege = 0;
+
         for (int i = 0; i < db; i++) {
 
             if (eredmenyek[i].helyezes <= 6) {
 
                 pontszerzesek++;
 
+                if (eredmenyek[i].helyezes == 1) {pontok_osszege += 7;}
+                if (eredmenyek[i].helyezes == 2) {pontok_osszege += 5;}
+                if (eredmenyek[i].helyezes == 3) {pontok_osszege += 4;}
+                if (eredmenyek[i].helyezes == 4) {pontok_osszege += 3;}
+                if (eredmenyek[i].helyezes == 5) {pontok_osszege += 2;}
+                if (eredmenyek[i].helyezes == 6) {pontok_osszege += 1;}
+
             }
 
-        }
+            if (eredmenyek[i].helyezes == 3) {bronz++;}
+            if (eredmenyek[i].helyezes == 2) {ezust++;}
+            if (eredmenyek[i].helyezes == 1) {arany++;}
 
-        System.out.println(pontszerzesek);
+        }
 
         scanner.close();
 
