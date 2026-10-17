@@ -28,7 +28,6 @@ public class GrafikusFelület extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Adatok beolvasása
         Scanner scanner = new Scanner(
             new File("Helsinki/helsinki.txt")
         );
@@ -46,7 +45,6 @@ public class GrafikusFelület extends JFrame {
 
         scanner.close();
 
-        // Táblázat létrehozása
         String[] oszlopok = {
             "Helyezés", "Sportolók száma",
             "Sportág", "Versenyszám"
@@ -78,7 +76,6 @@ public class GrafikusFelület extends JFrame {
 
         add(gombPanel, BorderLayout.SOUTH);
 
-        // Éremstatisztika gomb működése
         ermekGomb.addActionListener(e -> {
 
             int arany = 0;
@@ -100,7 +97,6 @@ public class GrafikusFelület extends JFrame {
                 JOptionPane.INFORMATION_MESSAGE);
         });
 
-        // Olimpiai pontok gomb működése
         pontokGomb.addActionListener(e -> {
 
             int osszpont = 0;
