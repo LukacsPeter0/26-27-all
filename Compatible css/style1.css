@@ -1,0 +1,97 @@
+:root {
+
+    --color_one: rgb(163, 153, 153);
+    --color_two: rgb(102, 101, 101);
+    --color_three: rgb(240, 200, 252);
+    --color_four: rgb(73, 47, 82);
+    --color_five: rgb(183, 136, 197);
+    --color_six: rgb(233, 233, 233);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    font-family: cursive;
+    font-size: 100%;
+
+}
+
+header {
+
+    background-color: var(--color_five);
+    color: var(--color_six);
+    padding: 50px;
+    text-align: center;
+    font-size: 120%;
+
+}
+
+h3 {
+
+    padding-top: 15px;
+
+}
+
+nav {
+
+    background-color: var(--color_four);
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+a {
+
+    color: var(--color_six);
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.5s;
+
+}
+
+main {
+
+    background-color: var(--color_one);
+    color: var(--color_six);
+    text-align: justify;
+    padding: 30px;
+
+}
+
+.hero {
+
+    background-color: var(--color_two);
+    float: left;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 3px 6px 12px var(--color_two);
+
+}
+
+.kozep {
+
+    text-align: center;
+
+}
+
+.button {
+
+    padding: 10px;
+    background-color: var(--color_four);
+    color: var(--color_six);
+    border-radius: 10px;
+    border-color: var(--color_six);
+
+    
+    font-size: 15px;
+
+}
