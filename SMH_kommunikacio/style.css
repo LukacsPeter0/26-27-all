@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    background-color: #f4f7fb;
+    color: #263238;
+}
+
+header {
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.15rem;
+    color: #eaf4ff;
+}
+
+nav {
+    background-color: #0d47a1;
+    padding: 12px 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #42a5f5;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1100px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 28px;
+    margin-bottom: 28px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+section h2 {
+    color: #1565c0;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e3f2fd;
+}
+
+section h3 {
+    color: #0d47a1;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+section ul,
+section ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #174a7e;
+}
+
+.kartya-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.kartya {
+    background-color: #f1f7ff;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 5px solid #2196f3;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kartya:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(21, 101, 192, 0.12);
+}
+
+.kartya h3 {
+    margin-bottom: 10px;
+}
+
+.kartya p {
+    margin-bottom: 0;
+}
+
+.pelda {
+    background-color: #ffffff;
+    border: 1px solid #dce4ec;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 20px 0;
+}
+
+.pelda h3 {
+    margin-bottom: 16px;
+    color: #1565c0;
+}
+
+.pelda p {
+    margin-bottom: 12px;
+}
+
+.rossz {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border-left: 5px solid #e53935;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+.jo {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-left: 5px solid #43a047;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+thead {
+    background-color: #1565c0;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border: 1px solid #dce4ec;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f7ff;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+main a {
+    color: #1565c0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover,
+main a:focus {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}

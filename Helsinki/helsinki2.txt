@@ -1,0 +1,5 @@
+2 1 5 kajak-kenu kenu_egyes_10000m
+2 1 5 kajak-kenu kajak_egyes_1000m
+3 2 4 kajak-kenu kenu_kettes_10000m
+5 2 2 kajak-kenu kenu_kettes_1000m
+6 1 1 kajak-kenu kajak_egyes_500m

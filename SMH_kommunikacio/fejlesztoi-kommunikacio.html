@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kommunikáció a fejlesztői csapatban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kommunikáció a fejlesztői csapatban</h1>
+        <p>Együttműködés, problémamegoldás és közös siker</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="kommunikacio.html">A kommunikáció alapjai</a></li>
+            <li><a href="fejlesztoi-kommunikacio.html">Fejlesztői kommunikáció</a></li>
+            <li><a href="online-kommunikacio.html">Online kommunikáció</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Miért fontos a kommunikáció a fejlesztésben?</h2>
+
+            <p>
+                A szoftverfejlesztés általában csapatmunka. Egy alkalmazás
+                elkészítésében fejlesztők, tesztelők, projektvezetők,
+                tervezők és ügyfelek is részt vehetnek.
+            </p>
+
+            <p>
+                Ahhoz, hogy a projekt sikeres legyen, mindenkinek
+                értenie kell a feladatát, a közös célokat és a
+                felmerülő problémákat. A jó kommunikáció csökkenti
+                a félreértéseket, segíti a hibák javítását és
+                megkönnyíti a közös munkát.
+            </p>
+        </section>
+
+        <section>
+            <h2>1. Fejlesztő és fejlesztő</h2>
+
+            <article class="kartya">
+                <h3>Kódreview</h3>
+
+                <p>
+                    A kódreview során egy másik fejlesztő átnézi
+                    a megírt kódot. A cél a hibák felismerése,
+                    a kód minőségének javítása és a tudás megosztása.
+                </p>
+
+                <p><strong>Rossz visszajelzés:</strong></p>
+                <p class="rossz">
+                    „Ez rossz kód, írd újra!”
+                </p>
+
+                <p><strong>Jobb visszajelzés:</strong></p>
+                <p class="jo">
+                    „A függvény több különböző feladatot végez.
+                    Ha kisebb függvényekre bontjuk, könnyebben
+                    tesztelhető és karbantartható lesz.”
+                </p>
+            </article>
+
+            <article class="kartya">
+                <h3>Segítségkérés</h3>
+
+                <p>
+                    Ha elakadunk, érdemes röviden bemutatni,
+                    min dolgozunk, mit próbáltunk, és hol
+                    jelentkezik a probléma.
+                </p>
+
+                <p><strong>Jó példa:</strong></p>
+                <p class="jo">
+                    „A felhasználói adatokat szeretném lekérni
+                    az API-ból, de 401-es hibát kapok.
+                    Ellenőriztem a végpont címét, de a hiba
+                    továbbra is jelentkezik. Meg tudnánk nézni
+                    együtt a hitelesítést?”
+                </p>
+            </article>
+
+            <article class="kartya">
+                <h3>Technikai problémák megbeszélése</h3>
+
+                <p>
+                    Egy probléma leírásakor adjuk meg a hiba
+                    körülményeit, az érintett technológiát és
+                    a már kipróbált megoldásokat.
+                </p>
+
+                <ul>
+                    <li>Mi a probléma?</li>
+                    <li>Mikor jelentkezik?</li>
+                    <li>Milyen hibaüzenetet kapunk?</li>
+                    <li>Mit próbáltunk eddig?</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>2. Fejlesztő és tesztelő</h2>
+
+            <p>
+                A tesztelő feladata, hogy ellenőrizze a szoftver
+                működését, és jelezze az észlelt hibákat.
+                A fejlesztőnek olyan információkra van szüksége,
+                amelyek alapján a hibát meg tudja keresni és javítani.
+            </p>
+
+            <article class="kartya">
+                <h3>Hibák pontos leírása</h3>
+
+                <p>
+                    A hibajegy tartalmazza a probléma rövid címét,
+                    a környezetet, a reprodukálási lépéseket,
+                    az elvárt és a tényleges működést.
+                </p>
+
+                <h3>Példa egy hibajegyre</h3>
+
+                <p><strong>Hiba címe:</strong> Sikertelen bejelentkezés érvényes adatokkal</p>
+
+                <p><strong>Környezet:</strong> Windows 11, Chrome böngésző</p>
+
+                <p><strong>Reprodukálási lépések:</strong></p>
+                <ol>
+                    <li>Nyissuk meg a bejelentkezési oldalt!</li>
+                    <li>Adjunk meg érvényes felhasználónevet és jelszót!</li>
+                    <li>Kattintsunk a Bejelentkezés gombra!</li>
+                </ol>
+
+                <p><strong>Elvárt eredmény:</strong> A felhasználó sikeresen belép.</p>
+
+                <p><strong>Tényleges eredmény:</strong> Hibaüzenet jelenik meg, és a belépés sikertelen.</p>
+
+                <p><strong>Prioritás:</strong> Magas, mert a felhasználók nem tudnak belépni.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>3. Fejlesztő és ügyfél</h2>
+
+            <p>
+                Az ügyfél gyakran nem ismeri a technikai részleteket,
+                ezért a fejlesztőnek érthetően kell kérdeznie és
+                elmagyaráznia a lehetőségeket.
+            </p>
+
+            <article class="kartya">
+                <h3>Követelmények tisztázása</h3>
+
+                <p><strong>Nem megfelelő kérdés:</strong></p>
+                <p class="rossz">
+                    „Pontosan mit akarsz?”
+                </p>
+
+                <p><strong>Megfelelő kérdés:</strong></p>
+                <p class="jo">
+                    „Azt szeretné, hogy a felhasználók e-mail-címmel
+                    és jelszóval jelentkezzenek be, vagy más
+                    bejelentkezési módra is szükség van?”
+                </p>
+            </article>
+
+            <article class="kartya">
+                <h3>Visszajelzés az ügyfélnek</h3>
+
+                <p>
+                    A technikai problémákat egyszerűen és
+                    megoldásközpontúan magyarázzuk el.
+                    Ne használjunk felesleges szakkifejezéseket,
+                    és ne ígérjünk olyat, amit nem tudunk teljesíteni.
+                </p>
+
+                <p class="jo">
+                    „A fizetési funkció tesztelése közben hibát
+                    találtunk. Dolgozunk a javításon, és a következő
+                    egyeztetésen tájékoztatjuk az eredményről.”
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>4. Fejlesztő és projektvezető</h2>
+
+            <p>
+                A projektvezetőnek tudnia kell, hogyan haladnak
+                a feladatok, milyen problémák merültek fel,
+                és tarthatók-e a határidők.
+            </p>
+
+            <article class="kartya">
+                <h3>Feladatok állapotának jelzése</h3>
+
+                <p><strong>Rossz változat:</strong></p>
+                <p class="rossz">
+                    „Még dolgozom rajta.”
+                </p>
+
+                <p><strong>Jobb változat:</strong></p>
+                <p class="jo">
+                    „A bejelentkezési oldal elkészült, jelenleg
+                    a tesztelés folyik. A jelszó-visszaállítási
+                    funkció még hátravan. A jelenlegi ütemezés
+                    alapján péntekre befejezem a feladatot.”
+                </p>
+            </article>
+
+            <article class="kartya">
+                <h3>Problémák időben történő jelzése</h3>
+
+                <p>
+                    Ha egy feladat várhatóan késni fog, minél
+                    hamarabb jelezzük. Röviden magyarázzuk el
+                    az okot, a várható hatást és a javasolt megoldást.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Hasznos eszközök a csapatmunkában</h2>
+
+            <ul>
+                <li><strong>GitHub:</strong> kódmegosztás, kódreview és hibajegyek.</li>
+                <li><strong>Jira:</strong> feladatok, határidők és projektállapotok követése.</li>
+                <li><strong>Slack:</strong> gyors csapatkommunikáció.</li>
+                <li><strong>E-mail:</strong> hivatalos egyeztetések és összefoglalók.</li>
+                <li><strong>Videóhívás:</strong> összetett kérdések és közös megbeszélések.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>A jó fejlesztői kommunikáció 5 szabálya</h2>
+
+            <ol>
+                <li>Fogalmazzunk világosan és pontosan!</li>
+                <li>Mutassunk konkrét példákat és hibaüzeneteket!</li>
+                <li>Adjunk tiszteletteljes, építő visszajelzést!</li>
+                <li>Jelezzük időben, ha elakadtunk vagy késünk!</li>
+                <li>Hallgassuk meg egymás ötleteit, és működjünk együtt!</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Összefoglalás</h2>
+
+            <p>
+                A fejlesztői munka nemcsak programozásból áll.
+                A sikeres csapatmunka alapja a pontos információátadás,
+                a segítőkész hozzáállás és a közös problémamegoldás.
+                A jó kommunikációval jobb minőségű szoftvereket
+                készíthetünk, és hatékonyabban dolgozhatunk együtt.
+            </p>
+
+            <p>
+                <a href="online-kommunikacio.html">
+                    Tovább az online kommunikációhoz →
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kommunikálj hatékonyan! | Iskolai projekt</p>
+    </footer>
+
+</body>
+</html>
