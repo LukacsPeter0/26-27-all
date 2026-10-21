@@ -25,7 +25,8 @@ body {
 
 header {
 
-    background-color: var(--color_five);
+    background: RGBA(183, 136, 197, 1);
+    background: linear-gradient(180deg, var(--color_five) 0%, var(--color_four) 100%);
     color: var(--color_six);
     padding: 50px;
     text-align: center;
@@ -45,6 +46,7 @@ nav {
     padding: 20px;
     text-decoration: none;
     text-align: center;
+    border-bottom: 3px solid var(--color_four);
 
 }
 
@@ -67,13 +69,10 @@ main {
 
 }
 
-.hero {
+.text {
 
-    background-color: var(--color_two);
-    float: left;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 3px 6px 12px var(--color_two);
+    padding: 20px;
+    text-align-last: center;
 
 }
 
@@ -90,8 +89,30 @@ main {
     color: var(--color_six);
     border-radius: 10px;
     border-color: var(--color_six);
-
-    
     font-size: 15px;
+
+}
+
+.flex {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+}
+
+.hero {
+
+    background-color: var(--color_two);
+    float: left;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 12px rgba(0, 0, 0, 0.06),
+        0 20px 30px rgba(0, 0, 0, 0.10),
+        0 40px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color_two);
+    width: 1500px;
 
 }
