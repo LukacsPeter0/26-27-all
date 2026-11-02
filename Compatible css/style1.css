@@ -2,7 +2,7 @@
 
     --color_one: rgb(163, 153, 153);
     --color_two: rgb(102, 101, 101);
-    --color_three: rgb(240, 200, 252);
+    --color_three: rgba(191, 160, 201, 0.829);
     --color_four: rgb(73, 47, 82);
     --color_five: rgb(183, 136, 197);
     --color_six: rgb(233, 233, 233);
@@ -62,7 +62,8 @@ a {
 
 main {
 
-    background-color: var(--color_one);
+    background: RGBA(191, 160, 201, 0.829);
+    background: linear-gradient(0deg, var(--color_three) 0%, var(--color_four) 100%);
     color: var(--color_six);
     text-align: justify;
     padding: 30px;
@@ -96,7 +97,7 @@ main {
 .flex {
 
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
     gap: 30px;
 
 }
@@ -104,15 +105,20 @@ main {
 .hero {
 
     background-color: var(--color_two);
-    float: left;
     border-radius: 20px;
     padding: 30px;
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.04),
-        0 8px 12px rgba(0, 0, 0, 0.06),
-        0 20px 30px rgba(0, 0, 0, 0.10),
-        0 40px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 6px 6px var(--color_four);
     border: 1px solid var(--color_two);
-    width: 1500px;
+    flex: 1;
+
+}
+
+.aside, .img {
+
+    background-color: var(--color_two);
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 3px 6px 6px var(--color_four);
 
 }
