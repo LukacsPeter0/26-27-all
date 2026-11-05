@@ -1,0 +1,110 @@
+:root {
+
+    --bg: #111318;
+    --vlila: #A78BFA;
+    --vkek: #60A5FA;
+    --szurke: #64748B;
+    --feher: #F3F6FA;
+    --atmenet: #7770F5;
+
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+
+    background-color: var(--bg);
+    text-align: justify;
+    color: var(--szurke);
+    text-transform: uppercase;
+
+}
+
+nav, main {
+
+    margin: 50px;
+
+}
+
+.navbar a, ul {
+
+    text-decoration: none;
+    list-style: none;
+    color: var(--szurke);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+}
+
+nav a:hover, nav a.aktiv {
+
+    color: var(--vlila);
+    transition: 0.3s;
+    text-shadow: 0 0 30px var(--vlila);
+
+}
+
+span {
+
+    color: var(--vlila);
+    text-shadow: 0 0 30px var(--vlila);
+
+}
+
+.eloadok {
+
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.eloado {
+
+    max-width: 300px;
+    flex-basis: content;
+    text-align-last: center;
+    box-shadow: 0 0 30px var(--vlila);
+    border-radius: 20px;
+    box-sizing: content-box;
+    padding: 30px;
+    transition:
+        transform 0.5s ease,
+        background-color 0.5s ease,
+        color 0.5s ease,
+        text-shadow 0.5s ease;
+}
+
+
+.eloado.kiemelt {
+
+    transform: scale(1.04);
+    color: var(--feher);
+    background-color: var(--vlila);
+    text-shadow: 0 0 30px var(--feher);
+
+}
+
+footer {
+
+    margin-top: 70px;
+    text-align: center;
+    border-top: 2px solid var(--vlila);
+
+}
+
+.footer {
+
+    margin: 30px;
+
+}
