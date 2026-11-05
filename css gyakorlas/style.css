@@ -137,3 +137,37 @@ body {
     gap: 15px;
   }
 }
+
+.login {
+
+  border-radius: 20px;
+  color:#9ca3af;
+  text-align: center;
+  align-items: center;
+  margin-top: 100px;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  border:#00f5ff;
+  box-shadow: 0 0 30px #00f5ff;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+
+.asd {
+
+  padding: 10px;
+
+}
+
+input {
+
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #8b5cf6;
+
+}
