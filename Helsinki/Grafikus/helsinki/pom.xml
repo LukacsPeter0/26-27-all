@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>helsinki</artifactId>
+  <artifactId>Helsinki</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>helsinki</name>
+  <name>Helsinki</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

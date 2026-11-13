@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.helsinki.HelloController">
+   <children>
+      <HBox layoutX="85.0" layoutY="114.0" prefHeight="202.0" prefWidth="430.0">
+         <children>
+            <Button id="fel3" fx:id="fel3" mnemonicParsing="false" onAction="#fel3" prefHeight="68.0" prefWidth="110.0" text="3.FEL" />
+            <Button id="fel4" fx:id="fel4" mnemonicParsing="false" onAction="#fel4" prefHeight="68.0" prefWidth="110.0" text="4.FEL" />
+            <Button id="fel5" fx:id="fel5" mnemonicParsing="false" onAction="#fel5" prefHeight="68.0" prefWidth="110.0" text="5.FEL" />
+         </children>
+      </HBox>
+      <Text layoutX="220.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUKI HELSINKI GRAFIKUS" wrappingWidth="159.7418212890625" />
+      <HBox layoutX="85.0" layoutY="200.0" prefHeight="202.0" prefWidth="430.0">
+         <children>
+            <Button id="fel6" fx:id="fel6" mnemonicParsing="false" onAction="#fel6" prefHeight="68.0" prefWidth="110.0" text="6.FEL" />
+            <Button id="fel7" fx:id="fel7" mnemonicParsing="false" onAction="#fel7" prefHeight="68.0" prefWidth="110.0" text="7.FEL" />
+            <Button id="fel8" fx:id="fel8" mnemonicParsing="false" onAction="#fel8" prefHeight="68.0" prefWidth="110.0" text="8.FEL" />
+         </children>
+      </HBox>
+      <Label fx:id="eredmenyLabel" layoutX="250.0" layoutY="300.0" prefHeight="68.0" prefWidth="110.0" />
+   </children>
+</AnchorPane>
