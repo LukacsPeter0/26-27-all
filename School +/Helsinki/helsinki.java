@@ -12,10 +12,10 @@ class Eredmeny {
 
 }
 
-public class main {
+public class helsinki {
     public static void main(String[] args) throws IOException {
         
-        File file = new File("Helsinki/helsinki.txt");
+        File file = new File("./Helsinki/helsinki.txt");
         Scanner scanner = new Scanner(file);
         Eredmeny[] eredmenyek = new Eredmeny[200];
         FileWriter writer = new FileWriter("./Helsinki/helsinki2.txt");

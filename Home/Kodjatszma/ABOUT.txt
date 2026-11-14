@@ -1,0 +1,4 @@
+Egy JAVAFX asztali alkalmazas, ahol 2 jatekmod van:
+	-Megadod, hogy milyen szempontok alapjan irjon kodot a 		gep. Ez az alap otlet.
+	-Megadja neked a gep, hogy milyen szempontok alapjan 		kell kodot irnod.
+Pl: Kiadja neked a gep, hogy a(z) 1234 szamsorozatbol 1 szam a kodban van, de az rossz helyen van. A(z) 5678 szamsorozatbol 2 a kodban van, 1 jo, 1 rossz helyen. Stb...
