@@ -35,6 +35,6 @@ public class HelloController {
 
     @FXML
     private void fel8() {
-        eredmenyLabel.setText("Helyezes: 1 \n Sportag: labdarugas \n Versenyszam: ferfi_csapat \n Sportolok szama: 15");
+        eredmenyLabel.setText("Helyezes: 1 \nSportag: labdarugas \nVersenyszam: ferfi_csapat \nSportolok szama: 15");
     }
 }

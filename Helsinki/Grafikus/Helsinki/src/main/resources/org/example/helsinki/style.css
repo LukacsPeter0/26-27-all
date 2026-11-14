@@ -1,0 +1,45 @@
+.root {
+
+    -fx-background-color: #32325e;
+
+}
+
+.hbox {
+
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+
+}
+
+.vbox {
+
+    -fx-alignment: center;
+
+}
+
+.Button {
+
+    -fx-background-radius: 8px;
+    -fx-alignement: center;
+    -fx-text-fill: white;
+    -fx-background-color: #171733;
+
+}
+
+.label {
+
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-font-family: cursive;
+    -fx-font-size: 15px;
+
+}
+
+.text1 {
+
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-family: cursive;
+
+}
