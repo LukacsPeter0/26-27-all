@@ -9,7 +9,7 @@ public class HelloController {
     private Label eredmenyLabel;
 
     @FXML
-    protected void fel3() {
+    private void fel3() {
         eredmenyLabel.setText("Pontszerzo helyezesek szama: 64");
     }
 
