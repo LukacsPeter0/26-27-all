@@ -17,7 +17,7 @@ def erosseg():
 
 for i in range(len(B)):
     erosseg()
-    if B[posi] == -1:
+    if S[posi] == -1:
         erosseg()
     else:
         posi += S[posi]
