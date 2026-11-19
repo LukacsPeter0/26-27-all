@@ -2,6 +2,10 @@ package org.example.helsinki;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class HelloController {
 
@@ -36,5 +40,24 @@ public class HelloController {
     @FXML
     private void fel8() {
         eredmenyLabel.setText("Helyezes: 1 \nSportag: labdarugas \nVersenyszam: ferfi_csapat \nSportolok szama: 15");
+    }
+
+    @FXML
+    private void tablazat() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("tablazat.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+        stage.setTitle("Eredmények");
+        stage.setScene(scene);
+        stage.show();
+
+        FXMLLoader bezarni = new FXMLLoader(getClass().getResource("helsinki.fxml"));
+
+        Stage bezar = new Stage(bezarni.load());
+        bezar.close();
+
     }
 }

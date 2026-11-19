@@ -16,4 +16,17 @@ public class Eredmeny {
 
     }
 
+    public int getHelyezes() {
+        return helyezes;
+    }
+    public int getSportolok_szama() {
+        return sportolok_szama;
+    }
+    public String getSportag() {
+        return sportag;
+    }
+    public String getVersenyszam() {
+        return versenyszam;
+    }
+
 }
