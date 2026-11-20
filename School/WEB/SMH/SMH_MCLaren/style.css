@@ -1,11 +1,11 @@
 :root {
 
-    --bg: #111318;
-    --vlila: #A78BFA;
-    --vkek: #60A5FA;
-    --szurke: #64748B;
-    --feher: #F3F6FA;
-    --atmenet: #7770F5;
+    --bg: #151515;
+    --papaya: #FF8000;
+    --narancs: #FF9F1C;
+    --szurke: #A7A7A7;
+    --feher: #FFFFFF;
+    --atmenet: #FF8000;
 
 }
 
@@ -47,16 +47,16 @@ nav, main {
 
 nav a:hover, nav a.aktiv {
 
-    color: var(--vlila);
+    color: var(--papaya);
     transition: 0.3s;
-    text-shadow: 0 0 30px var(--vlila);
+    text-shadow: 0 0 30px var(--papaya);
 
 }
 
 span {
 
-    color: var(--vlila);
-    text-shadow: 0 0 30px var(--vlila);
+    color: var(--papaya);
+    text-shadow: 0 0 30px var(--papaya);
 
 }
 
@@ -75,7 +75,7 @@ span {
     max-width: 300px;
     flex-basis: content;
     text-align-last: center;
-    box-shadow: 0 0 30px var(--vlila);
+    box-shadow: 0 0 30px var(--papaya);
     border-radius: 20px;
     box-sizing: content-box;
     padding: 30px;
@@ -91,7 +91,7 @@ span {
 
     transform: scale(1.04);
     color: var(--feher);
-    background-color: var(--vlila);
+    background-color: var(--papaya);
     text-shadow: 0 0 30px var(--feher);
 
 }
@@ -100,7 +100,7 @@ footer {
 
     margin-top: 70px;
     text-align: center;
-    border-top: 2px solid var(--vlila);
+    border-top: 2px solid var(--papaya);
 
 }
 
