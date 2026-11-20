@@ -2,12 +2,15 @@ package org.example.calculator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 public class CalculatorController {
 
     private Double storeValue = null;
     private String pendingOp = null;
     private boolean startNewNumber = true;
+
+    @ FXML private TextField display;
 
     @FXML
     private void initialize() {
