@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.helsinki_test.HelloController">
+
+    <children>
+        <TableView fx:id="eredmenyekTable" layoutX="37.0" layoutY="100.0" prefHeight="200.0" prefWidth="525.0">
+
+            <columns>
+                <TableColumn fx:id="helyezes" prefWidth="75.0" text="helyezes" />
+
+                <TableColumn fx:id="sportolok_szama" prefWidth="150.0" text="sportolok szama" />
+
+                <TableColumn fx:id="sportag" prefWidth="150.0" text="sportag" />
+
+                <TableColumn fx:id="versenyszam" prefWidth="150.0" text="versenyszam" />
+            </columns>
+
+        </TableView>
+    </children>
+
+</AnchorPane>

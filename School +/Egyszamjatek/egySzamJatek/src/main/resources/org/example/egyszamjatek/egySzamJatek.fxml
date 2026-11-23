@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.egyszamjatek.ESZJController">
+   <children>
+      <HBox layoutX="200.0" layoutY="124.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="fel3" mnemonicParsing="false" onAction="#fel3" text="Button" />
+            <Button fx:id="fel4" mnemonicParsing="false" onAction="#fel4" text="Button" />
+            <Button fx:id="fel5" mnemonicParsing="false" onAction="#fel5" text="Button" />
+         </children>
+      </HBox>
+      <HBox layoutX="193.0" layoutY="194.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="fel6" mnemonicParsing="false" onAction="#fel6" text="Button" />
+            <Button fx:id="fel8" mnemonicParsing="false" onAction="#fel8" text="Button" />
+            <Button fx:id="fel9" mnemonicParsing="false" onAction="#fel9" text="Button" />
+         </children>
+      </HBox>
+      <HBox layoutX="193.0" layoutY="265.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="fel10" mnemonicParsing="false" onAction="#fel10" text="Button" />
+         </children>
+      </HBox>
+      <Label fx:id="megjelenites" layoutX="209.0" layoutY="493.0" prefHeight="118.0" prefWidth="258.0" text="Label" />
+      <TextField fx:id="fel7" layoutX="219.0" layoutY="374.0" onAction="#fel7" />
+   </children>
+</AnchorPane>
