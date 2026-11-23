@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Teendőlista feladat</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 40px auto; }
+    li { cursor: pointer; padding: 8px 0; border-bottom: 1px solid #eee; }
+    .kesz { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+
+  <h2>Teendőim</h2>
+  <input type="text" id="uj-teendo" placeholder="Írj be egy feladatot...">
+  <button id="hozzaad-gomb">Hozzáadás</button>
+
+  <ul id="lista">
+    <!-- Ide kerülnek majd a JS által generált <li> elemek -->
+  </ul>
+
+  <script>
+        
+        const gomb = document.getElementById("hozzaad-gomb")
+        const teendo = document.getElementById("uj-teendo")
+        const lista = document.getElementById("lista")
+
+        gomb.addEventListener("click", function() {
+
+            const szoveg = teendo.value.trim();
+
+            if (szoveg == "") {
+
+                teendo.value = "";
+                return;
+
+            }
+
+            const li = document.createElement("li");
+            li.textContent = szoveg;
+
+            lista.appendChild(li);
+
+            teendo.value = "";
+
+            })
+
+        lista.addEventListener("click", function(event) {
+
+            if (event.target.tagName === "LI") {
+
+                event.target.classList.toggle("kesz")
+
+            }
+
+        })
+
+  </script>
+
+</body>
+</html>
